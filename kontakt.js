@@ -23,6 +23,5 @@ function SendMail() {
 let sendButton = document.getElementById("sendButton");
 
 sendButton.addEventListener("click", function () {
-  console.log("klik!");
   SendMail();
 });
