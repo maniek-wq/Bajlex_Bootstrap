@@ -65,4 +65,7 @@ footer {
     align-items: center;
     justify-items: center;
   }
+  .activeHr {
+    display: none;
+  }
 }

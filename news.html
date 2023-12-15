@@ -29,7 +29,7 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link rel="stylesheet" href="./kontakt.css" />
+    <link rel="stylesheet" href="./news.css" />
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -75,88 +75,90 @@
         </div>
       </div>
     </nav>
+    <h1 class="ms-4 mt-4">Aktualności</h1>
+    <div class="container d-flex">
+      <div class="row align-items-start">
+        <div class="col mt-4">
+          <img
+            src="img/panel.jpg"
+            class="img-fluid"
+            style="border-radius: 15px"
+            alt="..."
+          />
+        </div>
+        <div class="col text">
+          <p class="date mt-3" style="text-align: left; color: grey">
+            <i>15.08.2023</i>
+          </p>
+          <h5 class="header" style="text-align: left">
+            Nowa umowa na obsługę BHP farmy fotowoltaicznej Golczewo
+          </h5>
+          <p class="textPar" style="text-align: left">
+            Mamy przyjemność poinformować, iż będziemy firmą nadzorującą w
+            zakresie BHP budowę Farmy Fotowoltaicznej Golczewo w województwie
+            zachodniopomorskim, o łącznej mocy 80 MW. Firma BAJLEX będzie
+            obsługiwała inwestycję z ramienia głównego wykonawcy – ONDE S.A.
+            Inwestorem Farmy jest Qair Polska, dla którego będzie to jedna z
+            największych jak do tej pory inwestycji na terenie Polski.
+          </p>
 
-    <div class="container-fluid d-flex mainContainer mt-4 w-100">
-      <div class="col">
-        <h2 class="mt-4 place" style="text-align: center">
-          Gdzie się znajdujemy?
-        </h2>
-        <div class="shadow rounded mt-1" id="map"></div>
-      </div>
-      <hr class="mt-4 underMap" />
-      <!-- 2nd col -->
-      <div class="col d-flex ndCol">
-        <section class="container kontakt mt-1">
-          <h4 class="mt-2">Jak się z nami skontaktować?</h4>
-          <p class="d-flex contactParagraph" style="gap: 15px">
-            <i class="fa-solid fa-phone" id="phone"></i>
-            <span class="call">Zadzwoń do nas!</span>
-            <span>660 071 024</span>
-          </p>
-          <p class="d-flex contactParagraph" style="gap: 15px">
-            <i class="fa-solid fa-envelope" id="envelope"></i
-            ><span class="write">Możesz też napisać </span
-            ><span>biuro@bajlex.pl</span>
-          </p>
-          <p class="d-flex contactParagraph" style="gap: 15px">
-            <i class="fa-solid fa-house-chimney" id="house"></i>
-            <span>Romantyczna 3, Buk</span>
-          </p>
-        </section>
-        <hr class="mt-4 underContact" />
-        <section class="container contactForm d-flex mb-3">
-          <h4 style="text-align: center">Napisz do nas!</h4>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"
-              >Adres e-mail</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="email_id"
-              placeholder="name@example.com"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"
-              >Wprowadź zapytanie</label
-            >
-            <textarea
-              class="form-control"
-              id="message"
-              rows="3"
-              required
-            ></textarea>
-          </div>
-          <button type="button" class="btn btn-primary" id="sendButton">
-            Wyślij
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Zobacz więcej
           </button>
-        </section>
-      </div>
-      <!-- 2nd col -->
 
-      <div class="col tlo">
-        <img src="img/BajlexTlo.jpg" class="img-fluid" alt="..." />
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-fullscreen-sm-down">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 d-flex" id="exampleModalLabel">
+                    <span style="font-size: 16px"><i>15.08.2023</i></span> Nowa
+                    Umowa
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  Mamy przyjemność poinformować, iż będziemy firmą nadzorującą w
+                  zakresie BHP budowę Farmy Fotowoltaicznej Golczewo w
+                  województwie zachodniopomorskim, o łącznej mocy 80 MW. Firma
+                  BAJLEX będzie obsługiwała inwestycję z ramienia głównego
+                  wykonawcy – ONDE S.A. Inwestorem Farmy jest Qair Polska, dla
+                  którego będzie to jedna z największych jak do tej pory
+                  inwestycji na terenie Polski.
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <script>
-      var map = L.map("map").setView(
-        [53.50608649627536, 14.352372135889363],
-        13
-      );
-
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      }).addTo(map);
-
-      L.marker([53.50608649627536, 14.352372135889363])
-        .addTo(map)
-        .bindPopup("Bajlex<br>Romantyczna, 3")
-        .openPopup();
-    </script>
     <footer class="mt-4">
       <h4>Znajdziesz nas tutaj!</h4>
       <div class="w-100"></div>
@@ -176,7 +178,7 @@
         ></a>
       </div>
     </footer>
-    <script src="kontakt.js"></script>
+    <script src="news.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
