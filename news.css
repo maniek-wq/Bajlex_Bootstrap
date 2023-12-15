@@ -47,6 +47,10 @@ img {
   .text {
     margin-top: 1rem;
   }
+  .container {
+    animation: fade-in 1s ease-out;
+    height: 75vh;
+  }
 }
 
 @keyframes fade-in {
@@ -62,5 +66,4 @@ img {
 
 .container {
   animation: fade-in 1s ease-out;
-  height: 70vh;
 }
