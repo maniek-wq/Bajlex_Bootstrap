@@ -36,3 +36,17 @@ img {
   height: 200px;
   width: 100%;
 }
+
+@media only screen and (min-width: 600px) {
+  .carousel {
+    width: 400px;
+    height: 200px;
+  }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: darkgray; /* Kolor tła (czarny) */
+  /* Dodatkowe style (opcjonalne) */
+  border-radius: 50%; /* Zaokrąglenie kształtu ikony */
+  /* Inne właściwości stylu według potrzeb */
+}
