@@ -30,41 +30,26 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .text {
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    background-color: #f9f9f9;
   }
-  .aboutHeader {
-    transform: translateY(-350%);
-  }
-  .about {
-    transform: translateY(-20%);
 
-    width: 60%;
-    font-size: 1.3rem;
-  }
   footer {
     width: 100%;
     height: 8.5rem;
+    position: absolute;
+    bottom: 0;
   }
-  .cards {
-    flex-direction: row;
-    gap: 50px;
-  }
-  .second {
-    height: 60vh;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-  }
+
   .activeHr {
     display: none;
   }
