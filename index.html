@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Bajlex</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary shadow rounded sticky-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Bajlex</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="./about.html"
+              >O nas</a
+            >
+            <a class="nav-link" href="./index.html">Usługi</a>
+            <a class="nav-link" href="./kontakt.html">Kontakt</a>
+            <a class="nav-link" href="./news.html">Aktualności</a>
+            <a class="nav-link" href="./partners.html">Partnerzy</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h2 class="mt-4" style="text-align: center">Usługi</h2>
+    <section class="container-fluid">
+      <div class="row mt-4 d-flex services">
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/pozar.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Szkolenia Przeciwpożarowe</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasWithBothOptions"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="offcanvasWithBothOptions"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Szkolenia Przeciwpożarowe
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  W trakcie szkoleń PPOŻ zdobędziesz praktyczne umiejętności
+                  oraz wiedzę teoretyczną, które są niezbędne w sytuacji
+                  zagrożenia pożarowego oraz ratowania ludzkiego życia.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/pomiary.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Pomiary środowiska pracy</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#Pomiary"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="Pomiary"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Szkolenia Przeciwpożarowe
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  Specjalizujemy się w wykonywaniu pomiarów środowiska pracy,
+                  bazując na obowiązujących regulacjach prawnych. Oferujemy
+                  pełny zakres badań czynników szkodliwych i uciążliwych w
+                  środowisku pracy, w tym pomiary natężenia oświetlenia.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/szkolenia.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Szkolenia BHP</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#Szkolenia"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="Szkolenia"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Szkolenia Przeciwpożarowe
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  Oferujemy pełną gamę szkoleń w zakresie BHP (wstępne, oraz
+                  okresowe dla wszystkich grup pracowniczych). Jeśli jesteś
+                  zainteresowany szkoleniem na odległość, możesz połączyć się z
+                  nami z dowolnego miejsca online, a my udzielimy
+                  pełnowartościowego, unikatowego szkolenia BHP, z
+                  wykorzystaniem profesjonalnych prezentacji multimedialnych.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/outsourcing.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Outsourcing</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#Outsourcing"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="Outsourcing"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Outsourcing
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  Nawiązujemy współpracę z firmami, oferując wykonywanie pełnego
+                  zakresu zadań służby BHP, w celu wypełnienia przepisów
+                  związanych z bezpieczeństwem i higieną pracy.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/nadzór.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Nadzór BHP na budowach</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#supervision"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="supervision"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Nadzór BHP na budowach
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  Od wielu lat, z sukcesami sprawujemy kompleksowy nadzór BHP
+                  nad budowami w Polsce, oraz na terenie Unii Europejskiej.
+                  Uczestniczymy w sporządzaniu planu BIOZ, przeprowadzamy
+                  kontrolę warunków pracy, analizujemy i oceniamy ryzyko, w
+                  podejmowanych pracach na terenie obsługiwanych budów.
+                  Oferujemy także sporządzanie wszelkiej niezbędnej dokumentacji
+                  związanej z procesem.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/kurs.jpeg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Kursy na wózki widłowe</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#cart"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="cart"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Kursy na wózki widłowe
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  BAJLEX prowadzi szkolenia przygotowujące do zdobycia uprawnień
+                  Urzędu Dozoru Technicznego w zakresie obsługi wózków
+                  jezdniowych podnośnikowych z wysięgnikiem z wyłączeniem wózków
+                  z napędem podnoszenia osoby obsługującej wraz z ładunkiem.
+                  Dobieramy najlepsze metody nauki w stosunku do indywidualnych
+                  potrzeb kursantów, co pomaga w przygotowaniu się do egzaminu
+                  państwowego. Jeżeli masz ukończone 18 lat oraz wykształcenie
+                  co najmniej podstawowe, skorzystaj z naszych usług i zdobądź
+                  uprawnienia!
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img src="img/instrukcje-4.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h6 class="card-title">Dokumentacja BHP i PPOŻ</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#docs"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="docs"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Dokumentacja BHP i PPOŻ
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  Przyjmujemy zlecenia na opracowanie: instrukcji BHP dla maszyn
+                  i urządzeń, oceny ryzyka zawodowego, instrukcję bezpieczeństwa
+                  pożarowego, wykonanie pełnej dokumentacji powypadkowej.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 cols-sm-3 p-1 shadow mb-5 bg-body-tertiary rounded"
+          style="width: 18rem"
+        >
+          <img
+            src="img/kurs-pierwszej-pomocy.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h6 class="card-title">Szkolenia z pierwszej pomocy</h6>
+
+            <button
+              class="btn btn-primary mt-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#firstAid"
+              aria-controls="offcanvasWithBothOptions"
+            >
+              Zobacz więcej
+            </button>
+
+            <div
+              class="offcanvas offcanvas-start"
+              data-bs-scroll="true"
+              tabindex="-1"
+              id="firstAid"
+              aria-labelledby="offcanvasWithBothOptionsLabel"
+            >
+              <div class="offcanvas-header">
+                <h6 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                  Szkolenia z pierwszej pomocy
+                </h6>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body w-100" id="szkol">
+                <!-- Img inside offcanvas -->
+
+                <div id="carouselExample" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="img/pozar.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExample"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <!-- Img inside offcanvas -->
+
+                <p class="mt-4" style="text-align: center">
+                  Szkolenia organizowane przez BAJLEX przeznaczone są dla każdej
+                  grupy zawodowej, a także osób indywidualnych chcących uzyskać
+                  wiedzę w zakresie udzielania pierwszej pomocy. Dbając o jakość
+                  szkoleń, do ich prowadzenia wykorzystujemy prezentacje
+                  multimedialne, fantomy oraz defibrylator AED.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary closeBtn"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Wyjdź
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <h4>Znajdziesz nas tutaj!</h4>
+      <div class="w-100"></div>
+      <div class="p-4 d-flex" style="gap: 20px">
+        <a
+          href="https://www.facebook.com/profile.php?id=100076476510012&sk=services"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-facebook fa-2xl" style="color: #1667f3"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/bajlex_bhp/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fa-brands fa-instagram fa-2xl" style="color: #d60056"></i
+        ></a>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
